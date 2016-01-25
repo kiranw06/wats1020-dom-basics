@@ -5,6 +5,7 @@
 //////////////////////////////////////////
 
 var generateFortuneCookie = function() {
+    'use strict';
     // This is where your code for the Fortune Cookie generator goes.
     // You will use the fortunesList variable defined lower in this file
     // to supply your fortune cookies with text.
@@ -15,22 +16,32 @@ var generateFortuneCookie = function() {
     // TODO: Update the Previous Fortunes list with the current `innerHTML`
     // value of `#fortune-cookie-text`. Follow these steps:
         // 1. Create a new `li` element with the `document.createElement()` method.
-        var newList = document.createElement("li"); 
-        var previousFortunesList = document.getElementsByTagName("li");
+        var previousFortunesList = document.createElement("li"); 
         // 2. Set the `innerHTML` of that element equal to the `innerHTML` of
         //    the `#fortune-cookie-text` element.
         previousFortunesList.innerHTML = fortuneContainer.innerHTML; 
         // 3. Select the `#previous-fortunes-container` container and use
         //    `appendChild()` to append the new `li` element you created above.
         var previousFortunesContainer = document.getElementById("previous-fortunes-container");
-        previousFortunesContainer.appendChild(previousFortunesList);
+        previousFortunesContainer.appendChild( previousFortunesList );
         // 4. You should see the previous fortune cookie saying show up in the list.
-
     // TODO: Select a new (random) fortune cookie saying from the data stored in the
     // `fortunesList` variable. (HINT: You will use `Math.floor()` and
     // `Math.random()` to accomplish this.) Use this data to update the
     // `innerText` of the `#fortune-cookie-text` element.
-
+    var currentFortune = fortunesList[Math.floor(Math.random()*fortunesList.length)];
+    fortuneContainer.innerHTML = currentFortune; 
+  
+    // var currentFortune = function() {
+                                      //make a function that omits 
+                                      //'Click the button to generate a saying.' string in previousFortunesList
+    // if ( currentFortune === 'Click the button to generate a saying.') {
+    //  return currentFortune;
+    // } else {
+    //   fortunesList[Math.floor(Math.random()*fortunesList.length)];
+    //   fortuneContainer.innerHTML = currentFortune;
+    // }
+    // } 
 }
 
 // The following data list is provided for you to use in your code.

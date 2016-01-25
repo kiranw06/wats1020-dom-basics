@@ -31,17 +31,6 @@ var generateFortuneCookie = function() {
     // `innerText` of the `#fortune-cookie-text` element.
     var currentFortune = fortunesList[Math.floor(Math.random()*fortunesList.length)];
     fortuneContainer.innerHTML = currentFortune; 
-  
-    // var currentFortune = function() {
-                                      //make a function that omits 
-                                      //'Click the button to generate a saying.' string in previousFortunesList
-    // if ( currentFortune === 'Click the button to generate a saying.') {
-    //  return currentFortune;
-    // } else {
-    //   fortunesList[Math.floor(Math.random()*fortunesList.length)];
-    //   fortuneContainer.innerHTML = currentFortune;
-    // }
-    // } 
 }
 
 // The following data list is provided for you to use in your code.
